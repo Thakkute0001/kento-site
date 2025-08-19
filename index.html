@@ -1,12 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kento Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kento — Game · Cầu lông · Sửa điện thoại</title>
+  <meta name="description" content="Trang Kento: Game, Cầu lông và Sửa/Buôn điện thoại. Demo tĩnh dễ thay nội dung.">
+  <style>
+    :root{--ink:#0f172a;--muted:#64748b;--bg:#f8fafc;--card:#ffffff;--brand1:#6366f1;--brand2:#ec4899}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:var(--bg);color:var(--ink)}
+    header{background:linear-gradient(90deg,var(--brand1),var(--brand2));color:white;padding:20px 0;position:sticky;top:0;z-index:10}
+    .container{max-width:1000px;margin:0 auto;padding:0 16px}
+    nav a{color:white;margin-left:12px;text-decoration:none;font-weight:600;opacity:.95}
+    nav a:hover{opacity:1;text-decoration:underline}
+    .hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin:28px 0}
+    .card{background:var(--card);border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(15,23,42,.08)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:12px}
+    h1,h2{margin:0 0 10px 0}
+    h2{font-size:22px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--brand1);color:white;text-decoration:none;font-weight:600}
+    .btn:hover{filter:brightness(1.05)}
+    footer{color:#475569;padding:24px 0;font-size:14px;text-align:center;margin-top:26px}
+    .logo{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-weight:800}
+    .muted{color:var(--muted)}
+    input,textarea{width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:10px;font:inherit}
+    label{font-size:13px;color:#475569;display:block;margin:6px 0 4px}
+    form .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width:640px){form .row{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <h1>Chào mừng đến với Kento Site!</h1>
-  <p>Đây là trang demo đầu tiên của bạn.</p>
+  <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="logo">KT</div>
+        <div>
+          <div style="font-weight:800">Kento</div>
+          <div style="font-size:12px;opacity:.9">Game · Cầu lông · Sửa & Buôn điện thoại</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#videos">Videos</a>
+        <a href="#badminton">Cầu lông</a>
+        <a href="#services">Dịch vụ</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div style="flex:1;min-width:260px">
+        <h1>Kento — Game, Cầu lông và Sửa điện thoại</h1>
+        <p class="muted">Trang demo tĩnh: dễ thay chữ, đổi màu, thêm ảnh. Bạn chỉ cần sửa file <code>index.html</code> và upload lại là xong.</p>
+        <a class="btn" href="#contact">Liên hệ ngay</a>
+      </div>
+      <div style="width:340px;max-width:100%">
+        <div class="card" style="text-align:center;padding:28px">
+          <div style="font-weight:700;margin-bottom:8px">Ảnh/Video thumbnail</div>
+          <div class="muted" style="font-size:13px">Đặt ảnh sản phẩm, sân cầu, hay ảnh bạn tại đây.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos">
+      <h2>Video & Clips</h2>
+      <div class="grid">
+        <div class="card"><strong>Top Smash Tips</strong><div class="muted" style="font-size:12px">8:42</div></div>
+        <div class="card"><strong>Gameplay - Funny</strong><div class="muted" style="font-size:12px">12:10</div></div>
+        <div class="card"><strong>Sửa nhanh màn hình</strong><div class="muted" style="font-size:12px">6:05</div></div>
+      </div>
+    </section>
+
+    <!-- Badminton -->
+    <section id="badminton" style="margin-top:20px">
+      <h2>Cầu lông</h2>
+      <div class="card" style="margin-top:10px">
+        <p>Bài tập di chuyển, kỹ thuật smash, và tips phòng tránh chấn thương — dành cho người mới. Bạn có thể thay đoạn này bằng mô tả câu lạc bộ, lịch tập, phí tham gia…</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" style="margin-top:20px">
+      <h2>Dịch vụ sửa & buôn điện thoại</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Thay màn hình</strong>
+          <div class="muted" style="font-size:13px">Lấy ngay, bảo hành 6–12 tháng.</div>
+        </div>
+        <div class="card">
+          <strong>Pin & sạc</strong>
+          <div class="muted" style="font-size:13px">Thay pin chính hãng, kiểm tra miễn phí.</div>
+        </div>
+        <div class="card">
+          <strong>Mua bán máy cũ</strong>
+          <div class="muted" style="font-size:13px">Thu mua giá tốt — tư vấn trung thực.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="margin-top:20px">
+      <h2>Liên hệ</h2>
+      <div class="card">
+        <p class="muted" style="margin-top:0">Form này là ví dụ tĩnh. Nếu muốn gửi mail thật, nhắn mình để tích hợp Formspree/Netlify Forms.</p>
+        <form>
+          <div class="row">
+            <div>
+              <label>Họ tên</label>
+              <input placeholder="Nguyễn Văn A">
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" placeholder="ban@example.com">
+            </div>
+          </div>
+          <div style="margin-top:8px">
+            <label>Tin nhắn</label>
+            <textarea rows="4" placeholder="Tôi muốn sửa iPhone..."></textarea>
+          </div>
+          <div style="margin-top:10px">
+            <a class="btn" href="#">Gửi (demo)</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Kento — Demo nhanh
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
